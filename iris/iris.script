@@ -1,0 +1,9 @@
+zn "%SYS"
+do ##class(%SYSTEM.License).Upgrade()
+do ##class(SYS.Container).QuiesceForBundling()
+do ##class(Security.Users).UnExpireUserPasswords("*")
+
+
+zn "TARTESSOS"
+set sc = $SYSTEM.OBJ.LoadDir("/opt/irisapp/src/Tartessos", "ck", , 1)
+set sc = $SYSTEM.OBJ.Load("/opt/irisapp/precompiled.xml", "ck", , 1)

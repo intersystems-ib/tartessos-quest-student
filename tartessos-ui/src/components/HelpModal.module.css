@@ -1,0 +1,63 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.modal {
+  width: min(720px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  overflow: auto;
+  padding: 24px;
+  background: #201811;
+  border: 4px solid #c59646;
+  box-shadow: 0 0 0 4px #080503;
+  color: #f6dfb0;
+  font-family: "Courier New", monospace;
+}
+
+.modal h2 {
+  margin: 0 0 16px;
+  color: #ffd46b;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.content {
+  display: grid;
+  gap: 12px;
+  line-height: 1.45;
+}
+
+.content p {
+  margin: 0;
+}
+
+.content ol {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.closeButton {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 2px solid #120b05;
+  background: #c59646;
+  color: #211406;
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #6b431c;
+}
+
+.closeButton:hover {
+  background: #e3b85c;
+}

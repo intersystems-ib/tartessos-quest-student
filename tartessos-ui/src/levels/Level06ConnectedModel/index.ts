@@ -1,0 +1,1 @@
+export { Level06ConnectedModel } from "./Level06ConnectedModel";

@@ -1,0 +1,9 @@
+.gameFrame {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #201811;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}

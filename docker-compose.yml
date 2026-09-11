@@ -1,0 +1,46 @@
+services:
+  iris-tartessos:
+    init: true
+    container_name: iris-tartessos
+    build:
+      context: .
+      dockerfile: iris/Dockerfile
+    ports:
+      - 52774:52773
+      - 51774:1972
+    volumes:
+      - ./iris/shared:/iris-shared
+    environment:
+      - ISC_DATA_DIRECTORY=/iris-shared/durable
+    command: --check-caps false --ISCAgent false
+
+  webgateway:
+    init: true
+    container_name: webgateway
+    build:
+      context: .
+      dockerfile: webgateway/Dockerfile
+    hostname: webgateway
+    ports:
+      - "8080:80"
+      - "8443:443"
+    environment:
+      - ISC_DATA_DIRECTORY=/webgateway-shared/durable
+      - ISC_CSP_CONF_FILE=/webgateway-shared/CSP.conf
+      - ISC_CSP_INI_FILE=/webgateway-shared/CSP.ini
+    volumes:
+      - ./webgateway/shared:/webgateway-shared
+    depends_on:
+      - iris-tartessos
+
+  tartessos-ui:
+    init: true
+    container_name: tartessos-ui
+    build:
+      context: ./tartessos-ui
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - webgateway
+    restart: unless-stopped

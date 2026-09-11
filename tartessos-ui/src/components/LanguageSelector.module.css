@@ -1,0 +1,23 @@
+.languageSelector {
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 2px solid #6f5637;
+  background: rgba(20, 14, 8, 0.9);
+  color: #ffd46b;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+}
+
+.languageSelector select {
+  border: 1px solid #80653f;
+  background: #201811;
+  color: #f6dfb0;
+  font-family: inherit;
+  padding: 4px 6px;
+}
