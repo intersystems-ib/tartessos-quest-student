@@ -195,7 +195,7 @@
       "helpStep2": "Localiza el método PrepareTool(tool As %String, total As %Integer).",
       "helpStep3": "Comprueba el valor de tool usando sentencias If.",
       "helpStep4": "Para cada herramienta válida, crea un bucle For desde 1 hasta total.",
-      "helpStep5": "Dentro de cada bucle, llama al método correspondiente de Tartessos.Quest.ExcavationKitUtils.",
+      "helpStep5": "Dentro de cada bucle, llama al método correspondiente de Tartessos.Quest.Utils.",
       "helpStep6": "Usa AddTrowel(), AddHat(), AddFlashlight() o AddBattery() según corresponda.",
       "helpStep7": "Devuelve 1 si la herramienta es válida y 0 si no lo es. Compila la clase antes de revisar el equipo.",
       "helpExpectedTitle": "Resultado esperado",

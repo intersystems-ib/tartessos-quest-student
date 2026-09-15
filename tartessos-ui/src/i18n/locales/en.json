@@ -194,7 +194,7 @@
       "helpStep2": "Find the PrepareTool(tool As %String, total As %Integer) method.",
       "helpStep3": "Check the value of tool using If statements.",
       "helpStep4": "For each valid tool, create a For loop from 1 to total.",
-      "helpStep5": "Inside each loop, call the corresponding method from Tartessos.Quest.ExcavationKitUtils.",
+      "helpStep5": "Inside each loop, call the corresponding method from Tartessos.Quest.Utils.",
       "helpStep6": "Use AddTrowel(), AddHat(), AddFlashlight(), or AddBattery() as appropriate.",
       "helpStep7": "Return 1 if the tool is valid and 0 if it is not. Compile the class before reviewing the kit.",
       "helpExpectedTitle": "Expected result",
