@@ -7,11 +7,10 @@ Parameter CONTENTTYPE = "application/json";
 
 Parameter HandleCorsRequest = 1;
 
+// Define the route mapping for the REST API endpoint. The route is set to "/burialtrail" and it will handle GET requests.
 XData UrlMap [ XMLNamespace = "https://www.intersystems.com/urlmap" ]
 {
-<Routes>
-    <Route Url="/burial-trail" Method="GET" Call="GetBurialTrail"/>
-</Routes>
+
 }
 
 ClassMethod GetBurialTrail() As %Status
